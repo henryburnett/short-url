@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henryburnett/short-url.git"
+    "url": "git+https://github.com/henryburnett/short-url-server.git"
   },
   "author": "Henry Burnett",
   "license": "ISC",
@@ -20,7 +20,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7"
   },
   "devDependencies": {
     "@types/node": "^13.11.1",

@@ -1,0 +1,17 @@
+const express = require('express');
+const router = express.Router();
+const path = require('path');
+const urls = require('./urls');
+
+router.use(function (req,res,next) {
+  console.log('/' + req.method);
+  next();
+});
+
+router.get('/', function(req,res){
+  res.sendFile(path.resolve('views.html'));
+});
+
+router.use('/urls', urls);
+
+export = router;
