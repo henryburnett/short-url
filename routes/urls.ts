@@ -14,4 +14,8 @@ router.get('/geturl', function(req, res) {
     url.list(req,res);
 });
 
+router.get('/count', function(req, res) {
+    url.countDocuments(req, res);
+})
+
 export = router

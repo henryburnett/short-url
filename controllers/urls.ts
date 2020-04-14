@@ -35,3 +35,13 @@ exports.list = function (req, res) {
          });*/
     });
 };
+
+exports.countDocuments = function(req, res) {
+    Url.countDocuments({}, function(err, result) {
+      if (err) {
+        console.log({err});
+      } else {
+        res.json("Number of documents in the collection: " + result);
+      }
+    });
+  };

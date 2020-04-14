@@ -4,7 +4,7 @@ const cors = require('cors')
 const db = require('./db')
 const routes = require('./routes');
 
-import { createKey } from './functions/functions'
+import { createKey, countConvert } from './functions/functions'
 
 const app = express()
 const PORT = process.env.SERVER_PORT || 4000
@@ -16,7 +16,8 @@ app.use('/', routes)
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`)
-    console.log(createKey())
+    //console.log(createKey())
+    countConvert();
 })
 
 export {}
